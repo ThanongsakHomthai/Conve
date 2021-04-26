@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+    function noBack(){
+        window.history.forward()
+    }
+     
+    noBack();
+    window.onload = noBack;
+    window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+    window.onunload = function() { void (0) }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailyzer</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <link rel="stylesheet" href="custom1.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="water-drop.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons?d=gallery&q=line">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/sign-out-alt?style=solid">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+ 
+    <!-- Navbar  -->
+
+      <div class="container" id="navbg" style="display:block; background-color: steelblue; ">
+        <div class="row md-0 text-center mb-0">
+          <i class="col-2 ml-0 fa fa-ravelry" style=" margin-top: 20px; text-align: right; text-shadow: rgb(255, 255, 255) 0.11em 0.05em .05em;  font-size:48px;color: rgb(102, 206, 238)"></i>
+          <a id="logo" href="#" class="col navbar-brand ml-1" style="text-align: left ; font-family: 'Times New Roman', Times, serif" >Conveyor</a>
+          <button id="logout" class="col-1 fas fa-sign-out-alt mr-2 ml-2 mt-2 mb-2" style="padding-left: 0%; cursor: grabbing; color: rgb(64, 185, 246) ;
+          cursor: grabbing; border-color: rgb(255, 250, 250); background-color: rgb(255, 255, 255);" type="submit"><i class="ml-1 fa fa-sign-out" style="width: 10px; height: 10px;"></i></button>
+        </div>
+      </div>
+
+
+  <!-- Head --> 
+
+    <div class="text-center"> 
+      <div class="container" id="head">
+        <div class="row mt-2  ">
+        </div>
+      </div>
+    </div>
+   
+   <!-- DisShow -->
+    <div class="show">
+
+        <div class="container" id="show1" style="background-color: rgb(193, 223, 225)">
+          <div class="row text-center" >
+ 
+                <!-- <label id="selLabe1" for="text">Plotting Graphs</label>
+                  <div id="chartContainer" style="height: 200px; width: 100%; padding: 0 0 0;">
+                    <button class="mt-5" onclick="Charttt()">Open Chart</button>
+                  </div> -->
+                  <div class="col text-center mt-1 mx-auto mr-2 ml-2" id="selColL" >
+                    <label id="speedServo" for="text">Servo Speed</label>
+                  </div>
+                  <div class="col text-center mt-1 mx-auto"id="selColR"> 
+                    <label id="speedConve" for="text">Conveyor Speed</label>
+                  </div>
+       
+              <div class="row text-center mt-1 ml-0">
+                  <div class="col text-center" >
+                    <span id="selTcv">00</span>
+                  </div>
+                  <div class="col text-center" >
+                    <span id="selTank">00</span>
+                  </div>
+              </div>
+              <div class="row text-center mt-1 ml-0">
+                <div class="col text-center" style="padding-left: 0px ; padding-right: 0px;" >
+                    <h3 style="text-align: right;">rpm</h3>
+                </div>
+                <div class="col text-center" >
+                    <h3 style="text-align: right;">rpm</h3>
+              </div>
+            </div>
+
+              <div class="col text-center mt-1 mx-auto mr-2 ml-2" id="selColL" >
+                <label id="speedServo" for="text">Edit Speed Servo </label>
+              </div>
+
+              <div class="row text-center mt-1 ml-0 mb-4" >
+                <div class="col mt-2 " style="padding: 0 0 0;">
+                <button class="ml-2 mr-2" id="plus" style="width: 100% ;height: 100%; font-size: 24px; background-color: gray; color: white;" >+ 1 </button>
+              </div>
+              <div class="col mt-2">
+                <button class=" ml-2 mr-2" id="drop" style="width: 100% ;height: 100%; font-size: 24px; background-color: slategray; color: white;">- 1 </button>
+              </div> 
+            </div>
+              <!-- Button Start -->
+              <div class="row text-center mt-1 ml-0 mb-4" >
+                
+                <button class="mt-3" id="selStart" style="background-color:rgb(13, 150, 91);"data-toggle="modal" data-target="#myModal1" data-backdrop="static" data-keyboard="false">Start</button>
+                <button class="mt-3" id="offStart" style="background-color:rgb(187, 32, 27); display: none;"data-toggle="modal" data-target="#myModal1" data-backdrop="static" data-keyboard="false">Stop</button>
+ 
+              </div>   
+          </div>
+
+        </div><br>
+      
+
+    
+ 
+    <!-- Footer -->
+
+    <footer class="bg-dark" style="height: 80px; padding: 0 0 0;">
+      <div class="container  mb-0" >
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-muted mt-1">Final Project Robotics and Automation Engineering in Panyapiwat Institute of Management.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+   
+    <div id="tes"></div>
+
+
+    <!-- Firebase Libraries -->
+
+    <!-- Jquery CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script> 
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="custom1.js"></script>
+</body>
+</html>

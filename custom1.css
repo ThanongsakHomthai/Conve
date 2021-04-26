@@ -1,0 +1,378 @@
+body {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+/*
+button{
+  border: none;
+  outline: none;
+  background-color: darkgray;
+  color: #000;
+}*/
+.custom-toggler.navbar-toggler {
+  border-color: rgb(0, 0, 0);
+  background-color: #00eeff;
+} 
+
+header {
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  height: 500px;
+}
+a {
+  text-decoration: none;
+}
+#logo {
+  color: rgba(255, 255, 255, 0.624);
+  font-size: 48px;
+
+  text-shadow: 2px 2px rgb(255, 255, 255);
+}
+
+.navbar {
+  /*background: #378f9b;*/
+  background-color: rgb(101, 165, 191);
+
+}
+
+#history{
+
+  width: 5rem;
+  height: 4rem;
+  background-color: teal;
+  right: 10px;
+  margin-top: 10px;
+  opacity: 0.4;
+  filter: alpha(opacity=40); 
+  margin: 0;
+  font-size: 80% /*smaller*/;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  position: fixed;
+  /* top: 2em; */
+  left: auto;
+  /* width: 8.5em;
+  right: 2em; */
+}
+
+#history:hover {
+  margin: 0; 
+  padding: 0.5em 1.1em;
+  background: teal;
+  border: thin outset teal;
+  color: white;
+  opacity: 1.0;
+
+}
+
+footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#userList {
+  margin: 0px 0px 0px;
+  width: 100%;
+  left: 0px;
+  padding:  0rem;
+ border-radius: 10px;
+ box-shadow: 3px 3px 10px rgb(34, 209, 248);
+}
+
+
+
+#tableBlock {
+width: 100%;
+border: black;
+}
+
+@media (min-width: 280px) and (max-width: 540px) {
+
+  #history{
+
+    width: 4rem;
+    height: 3rem;
+    background-color: teal;
+    margin-right: 5px;
+    margin-top: 120px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);  
+    font-size: 80% /*smaller*/;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    position: fixed;
+    /* top: 2em; */
+    left: auto;
+    /* width: 8.5em;
+    right: 2em; */
+  }
+  
+  #history:hover {
+    margin-right: 5px;
+    margin-top: 120px;
+    padding: 0.5em 1.1em;
+    background: teal;
+    border: thin outset teal;
+    color: white;
+    opacity: 1.0;
+  
+  }
+
+  ul li {
+    display: block;
+    border: 3px black;
+  }
+  #date li,
+  #status li,
+  #tcv li,
+  #tank li,
+  #xx li{
+    list-style-type: none;
+    margin: 0px 0px 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 9px;
+    word-wrap:break-word;
+    height: 33px;
+  }
+  .del{
+    position: absolute;
+    right: 25px;
+    background-color: red;
+    padding: .1rem 0.3rem;
+    cursor: pointer;
+   }
+
+  #ic1,#ic2,#ic3 {
+    display: none;
+  }
+  #head {
+    display: none;
+  }
+
+  #speedServo,#speedConve{
+
+    color: black;
+    font-size: 20px;
+    
+  }
+
+  #selColL,
+  #selColR {
+    background-color: skyblue;
+    /* border-radius: 30%; */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #selTcv,
+  #selTank
+ {
+    font-weight: bold;
+    font-size: 48px;
+    color: rgb(21, 21, 21);
+  }
+  #selStart,
+  #offStart{
+    font-weight: bold;
+    font-size: 26px;
+  }
+  #myTimer,
+  #myTimer2{
+    font-size: 26px ; 
+    font-family: sans-serif;
+    background-color:red ; 
+    color: teal" 
+  }
+  #hder1,#hder2{
+    font-size: 30px;
+  }
+    
+  #cdtimesec,
+  #cdTimer,
+  #cdtimesec2,
+  #cdTimer2{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  #cdtime,#cdtime2{
+    color: red;
+    font-weight: bold;
+    font-size: 80px;
+  }
+}
+@media (min-width: 540px) and (max-width: 1800px) {
+    #hder1,#hder2{
+        font-size: 50px;
+      }
+        
+    #cdtimesec,
+    #cdTimer,
+    #cdtimesec2,
+    #cdTimer2{
+      font-weight: bold;
+      font-size: 40px;
+    }
+    
+    #cdtime,#cdtime2{
+      color: red;
+      font-weight: bold;
+      font-size: 170px;
+    }
+
+  #date li,
+  #status li,
+  #tcv li,
+  #tank li,
+  #xx li{
+    list-style-type: none;
+    margin: 0px 0px 0px;
+    left: 0px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+    word-wrap:break-word;
+    height: 60px;
+  }
+  .del{
+    position: absolute;
+    right: 25px;
+    background-color: black;
+    color: ivory;
+    padding: .3rem 0.9rem;
+    cursor: pointer;
+   }
+
+  #btUp1,
+  #btUp2,
+  #btUp3 {
+    display: none;
+  }
+  #radio0,
+  #radio1,
+  #radio2 {
+    position: absolute;
+    text-shadow: 0.5px 0.6px rgb(202, 252, 101);
+    transform: translate(-50%, -50%);
+    width: 25%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  #inradio0,
+  #inradio1,
+  #inradio2 {
+    display: none;
+  }
+  .yes .no .home {
+    position: relative;
+    display: inline-block;
+    margin: 40px 20px;
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    background: #000;
+    border: 5px solid#444;
+    color: #444;
+    border-radius: 4px;
+    font-size: 25px;
+  }
+  #radio0 .inradio0:checked ~ .home,
+  #radio1 .inradio1:checked ~ .yes,
+  #radio2 .inradio2:checked ~ .no {
+    color: #fff;
+    border: 1px solid #62ff00;
+  }
+  #radio0 .inradio0:checked ~ .home:before,
+  #radio1 .inradio1:checked ~ .yes:before,
+  #radio2 .inradio2:checked ~ .no:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #62ff00;
+    z-index: -1;
+    filter: blur(10px);
+  }
+  #radio0 .inradio0:checked ~ .home::after,
+  #radio1 .inradio1:checked ~ .yes::after,
+  #radio2 .inradio2:checked ~ .no::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #62ff00;
+    z-index: -1;
+    filter: blur(15px);
+  }
+  #radio0 .inradio0:checked ~ .home,
+  #radio1 .inradio1:checked ~ .yes,
+  #radio2 .inradio2:checked ~ .no {
+    color: black;
+    border: #62ff00;
+    box-shadow: inset 0 0 10px #62ff00;
+    font-weight: bold;
+  }
+
+  .legend {
+    display: inline-block;
+    background: darkcyan;
+  }
+
+  #repTcv,
+  #repTank,
+  #selTcv,
+  #selTank {
+    font-size: 124px;
+    font-weight: bold;
+    color: rgb(51, 47, 46);
+    text-shadow: 3px 2px rgb(7, 7, 7);
+  }
+
+  #offStart,
+  #selStart
+   {
+    font-weight: bold;
+    height: 60px;
+    font-size: 35px;
+  }
+  #myTimer,
+  #myTimer2{
+    
+    font-size: 35px ; 
+    font-family: sans-serif;
+    background-color:rgb(209, 172, 21) ; 
+    color: teal"
+    
+  }
+
+  #speedServo,
+  #speedConve {
+    color: #ffffff;
+    font-size: 44px;
+    text-shadow: 3px 2px rgb(7, 7, 7);
+  }
+  #selColL,
+  #selColR {
+    background-color: #134845;
+
+    border-radius: 10%;
+    text-shadow: 3px 2px rgb(7, 7, 7);
+  }
+}
