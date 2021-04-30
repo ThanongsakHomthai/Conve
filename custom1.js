@@ -175,31 +175,45 @@ function checkLogin() {
   };
 }
 
-// function Charttt(){
-//   var chart = new CanvasJS.Chart("chartContainer", {
-//     animationEnabled: true,
-//     theme: "light2",
-//     title:{
-//       text: "Simple Line Chart"
-//     },
-//     data: [{        
-//       type: "line",
-//           indexLabelFontSize: 16,
-//       dataPoints: [
-//         { y: 450 },
-//         { y: 414},
-//         { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
-//         { y: 460 },
-//         { y: 450 },
-//         { y: 500 },
-//         { y: 480 },
-//         { y: 480 },
-//         { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-//         { y: 500 },
-//         { y: 480 },
-//         { y: 510 }
-//       ]
-//     }]
-//   });
-//   chart.render();
-//   }
+window.onload = function () {
+
+  var dps = []; // dataPoints
+  var chart = new CanvasJS.Chart("chartContainer", {
+      title :{
+          text: "Servo Speed"
+      },
+      data: [{
+          type: "line",
+          dataPoints: dps
+      }]
+  });
+  
+  var xVal = 0;
+  var yVal = 0; 
+  var updateInterval = 3000;
+  var dataLength = 10; // number of dataPoints visible at any point
+  
+  var updateChart = function (count) {
+
+      count = count || 1;
+  
+      for (var j = 0; j < count; j++) {
+          yVal = sumCalServo; 
+          dps.push({
+              x: xVal,
+              y: yVal
+          });
+          xVal++;
+      }
+  
+      if (dps.length > dataLength) {
+          dps.shift();
+      }
+  
+      chart.render();
+  };
+  
+  updateChart(dataLength);
+  setInterval(function(){updateChart()}, updateInterval);
+  
+  }
