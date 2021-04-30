@@ -130,14 +130,12 @@ StartCon.onclick = function () {
   firebase.database().ref("StartCon/").update({
     btStart: Off1,
   });
-  setTimeout(function () {
-    StopCon.disabled = false;
-
-  }, 6000);
-  setTimeout(function () {
-    firebase.database().ref("StartCon/").update({
+  setTimeout(function () { 
+      firebase.database().ref("StartCon/").update({
       btStart: On1,
     });
+    
+    StopCon.disabled = false;
 
   }, 12000);
 };
@@ -163,14 +161,14 @@ StopCon.onclick = function () {
     btStart: Off1,
   });
   setTimeout(function () {
+      firebase.database().ref("StopCon/").update({
+      btStart: On1,
+    });
+    
     StartCon.disabled = false;
     Plus.disabled = false;
     Drop.disabled = false;
-  }, 6000);
-  setTimeout(function () {
-    firebase.database().ref("StopCon/").update({
-      btStart: On1,
-    });
+   
   }, 12000);
 };
 
