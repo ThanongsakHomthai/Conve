@@ -19,9 +19,11 @@ var checkWork = 1;
 
 var Servo = document.getElementById("selTcv");
 var SpeedCon = document.getElementById("selTank");
-var selTank;
+let calCon;
+let sumcalCon;
 let calServo;
 let sumCalServo;
+
 
 let btnselStart = document.querySelector("#selStart");
 
@@ -32,8 +34,9 @@ if (firebase != false) {
     .database()
     .ref("Speed/")
     .on("value", function (snapshot) {
-      selTank = document.getElementById("selTank").value = snapshot.val().Conve;
-      SpeedCon.innerHTML = selTank;
+       calCon = snapshot.val().Conve;
+      sumcalCon = calCon * 3.14;
+      SpeedCon.innerHTML = sumcalCon;
     });
 
   firebase
