@@ -35,7 +35,7 @@ if (firebase != false) {
     .ref("Speed/")
     .on("value", function (snapshot) {
        calCon = snapshot.val().Conve;
-      sumcalCon = calCon * 3.14;
+      sumcalCon = calCon * 31.4;
       SpeedCon.innerHTML = sumcalCon;
     });
 
