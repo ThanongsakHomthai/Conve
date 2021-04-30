@@ -181,6 +181,12 @@ function checkLogin() {
 }
 
 window.onload = function () {
+        firebase.database().ref("StartCon/").update({
+      btStart: On1,
+    });
+        firebase.database().ref("StopCon/").update({
+      btStart: On1,
+    });
 
   var dps = []; // dataPoints
   var chart = new CanvasJS.Chart("chartContainer", {
